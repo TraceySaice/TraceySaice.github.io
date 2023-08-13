@@ -1,4 +1,5 @@
-# 常见问题
+#
+常见问题
 
 ## 数据文件都存储在哪？
 
@@ -82,11 +83,11 @@ systemctl restart mcsm-{daemon,web}.service
 
 如果为Windows系统,需要到你解压的面板目录下进行
 
-假设解压目录为`C:\mcsm`
+假设解压目录为`C:\面板`
 
 1.进入面板存放用户文件的目录下
 
-目录为:`C:\mcsm\web\data`
+目录为:`C:\面板\mcsmanager\web\data`
 
 2.将data目录下的User目录重命名为UserBackup
 
