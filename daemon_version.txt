@@ -1,1 +1,2 @@
+registry.cn-guangzhou.aliyuncs.com/kabaka/kabaka:mcsmv10_daemon
 registry.cn-guangzhou.aliyuncs.com/kabaka/mcsmanager_daemon:v10.1.0
