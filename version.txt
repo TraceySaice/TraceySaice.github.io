@@ -1,1 +1,5 @@
-v10.1.0
+Web:
+registry.cn-guangzhou.aliyuncs.com/kabaka/kabaka:mcsmv10_web:v10.1.0
+
+Daemom: 
+registry.cn-guangzhou.aliyuncs.com/kabaka/kabaka:mcsmv10_daemon:v10.1.0
