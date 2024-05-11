@@ -1,1 +1,1 @@
-registry.cn-guangzhou.aliyuncs.com/kabaka/mcsmanager_web:10.1.0
+registry.cn-guangzhou.aliyuncs.com/kabaka/mcsmanager_web:v10.1.0
