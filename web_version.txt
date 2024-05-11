@@ -1,1 +1,1 @@
-v10.1.0
+registry.cn-guangzhou.aliyuncs.com/kabaka/kabaka:mcsmv10_web
