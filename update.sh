@@ -6,7 +6,7 @@ CURRENT_VERSION="0.0.1"
 SCRIPT_NAME=$(basename "$0")
 
 # GitHub 仓库中脚本的 URL
-SCRIPT_URL=""
+SCRIPT_URL="https://github.com/kabaka9527/mcsm-docker/blob/main/update.sh"
 
 # 临时文件用于下载新的脚本
 TEMP_SCRIPT="/tmp/${SCRIPT_NAME}"
