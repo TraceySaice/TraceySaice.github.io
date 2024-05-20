@@ -6,7 +6,7 @@ CURRENT_VERSION="0.0.1"
 SCRIPT_NAME=$(basename "$0")
 
 # GitHub 仓库中脚本的 URL
-SCRIPT_URL="https://github.com/kabaka9527/mcsm-docker/blob/main/update.sh"
+SCRIPT_URL="https://raw.githubusercontent.com/kabaka9527/mcsm-docker/main/update.sh"
 
 # 临时文件用于下载新的脚本
 TEMP_SCRIPT="/tmp/${SCRIPT_NAME}"
@@ -30,9 +30,9 @@ if [[ "$GITHUB_VERSION" != "$CURRENT_VERSION" && "$GITHUB_VERSION" > "$CURRENT_V
 
   # 删除旧脚本
   rm -- "$0"
-else
-  # 执行当前脚本
-  main
+
+  # 退出当前脚本的执行
+  exit 0
 fi
 
 # 主函数
