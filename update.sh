@@ -6,7 +6,7 @@ CURRENT_VERSION="0.0.1"
 SCRIPT_NAME=$(basename "$0")
 
 # GitHub 仓库中脚本的 URL
-SCRIPT_URL="https://raw.githubusercontent.com/kabaka9527/mcsm-docker/main/update.sh"
+SCRIPT_URL="https://mirror.ghproxy.com/https://raw.githubusercontent.com/kabaka9527/mcsm-docker/main/update.sh"
 
 # 临时文件用于下载新的脚本
 TEMP_SCRIPT="/tmp/${SCRIPT_NAME}"
@@ -53,7 +53,7 @@ main() {
   cd "$DOWNLOAD_DIR"
 
   # 获取最新的 MCSManager 版本下载地址
-  LATEST_URL=$(curl -sL "$REPO_URL/releases/latest" | grep -o -E "https://github.com/MCSManager/MCSManager/releases/download/[^/]+/mcsmanager_linux_release.tar.gz")
+  LATEST_URL=$(curl -sL "$REPO_URL/releases/latest" | grep -o -E "https://mirror.ghproxy.com/https://github.com/MCSManager/MCSManager/releases/download/[^/]+/mcsmanager_linux_release.tar.gz")
 
   # 下载最新的 MCSManager 版本
   wget -c "$LATEST_URL" -O "mcsmanager_linux_release.tar.gz"
