@@ -33,7 +33,8 @@ WORKDIR /app
 RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
 
 # 将当前目录下的内容复制到位于 /app 的容器中
-RUN wget https://alist.mindustry.ltd/d/cf_r2/mcsmanager_linux_release.tar.gz && tar vxf mcsmanager_linux_release.tar.gz && find /app -mindepth 1 ! -name 'daemon' ! -path '/app/daemon/*' -exec rm -rf {} +
+RUN wget https://alist.mindustry.ltd/d/cf_r2/mcsmanager_linux_release.tar.gz && tar vxf mcsmanager_linux_release.tar.gz 
+RUN find /app -mindepth 1 ! -name 'daemon' ! -path '/app/daemon/*' -exec rm -rf {} +
 
 # 在容器启动时运行 app.js
 CMD ["node", "app.js"]
