@@ -3,7 +3,6 @@ FROM node:20-slim
 # 定义一个参数，默认值为en_US.UTF-8
 #ARG LANG=zh_CN.UTF-8
 #ENV LANG=${LANG}
-RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
 
 # 设置容器时区
 RUN apt-get update && apt-get install -y tzdata && rm -rf /var/lib/apt/lists/*
@@ -30,6 +29,8 @@ ENV LANGUAGE=${LANG}
 
 # 将工作目录设置为 /app
 WORKDIR /app
+
+RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources
 
 # 将当前目录下的内容复制到位于 /app 的容器中
 RUN wget https://alist.mindustry.ltd/d/cf_r2/mcsmanager_linux_release.tar.gz && tar vxf mcsmanager_linux_release.tar.gz && find /app -mindepth 1 ! -name 'daemon' ! -path '/app/daemon/*' -exec rm -rf {} +
